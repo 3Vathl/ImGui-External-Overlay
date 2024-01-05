@@ -49,10 +49,11 @@ int main(int, char**)
     // Show the window
     ::ShowWindow(hwnd, SW_SHOWDEFAULT);
     ::UpdateWindow(hwnd);
-    SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
 
+    // Blah Blah
     MARGINS margins = { -1 };
     DwmExtendFrameIntoClientArea(hwnd, &margins);
+    
     // Setup Dear ImGui context
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
